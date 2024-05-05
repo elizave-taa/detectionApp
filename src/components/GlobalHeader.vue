@@ -3,9 +3,9 @@
   <div class="row">
     <img class="logo" src="../assets/logo.svg">
     <div class="links">
-        <p @onclick="aboutUs">О нас</p>
-        <p>Виды маркировок и значение</p>
-        <p>Контакты</p>
+        <p class="header-item" @onclick="aboutUs">О нас</p>
+        <p class="header-item">Виды маркировок и значение</p>
+        <p class="header-item">Контакты</p>
     </div>
   </div>
 </div>
@@ -41,6 +41,7 @@ export default {
     width: 100vw;
     justify-content: center;
     display: flex;
+    z-index: 10;
 }
 .row {
   width: 75vw;
@@ -58,5 +59,9 @@ export default {
   width: 60%;
   color: #FEFAE0;
   font-size: 15px;
+}
+.header-item:hover {
+  transform: scale(1.1);
+  cursor: pointer;
 }
 </style>
